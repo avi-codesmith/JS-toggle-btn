@@ -1,9 +1,11 @@
-document.querySelector(".wrapper").addEventListener("click", () => {
-  document.querySelector(".block").classList.toggle("right");
-  const sound = new Audio("sound.mp3");
-  sound.play();
-});
+const btn = document.querySelector(".wrapper");
+const block = document.querySelector(".block");
+const body = document.querySelector("body");
+const sound = new Audio("sound.mp3");
 
-document.querySelector(".wrapper").addEventListener("click", () => {
-  document.querySelector(".wrapper").classList.toggle("border");
+btn.addEventListener("click", () => {
+  block.classList.toggle("right");
+  body.classList.toggle("backC");
+  sound.play();
+  btn.classList.toggle("lightC");
 });
